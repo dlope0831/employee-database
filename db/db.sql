@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS managment;
-CREATE DATABASE managment;
+DROP DATABASE IF EXISTS management;
+CREATE DATABASE management;
 
-USE managment;
+USE management;
