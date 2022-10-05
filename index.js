@@ -140,10 +140,60 @@ inquirer
           function (err) {
             if (err) throw err;
           }
+          
         );
+        
         Menu();
 })
-};
+}
+const addRole = () =>{
+    db.promise().query("SELECT * FROM department").then(deptData => {
+            var deptArray = deptData[0].map(e => {
+        
+                return {name: `${e.department_name}`,
+            value:e.department_id }
+            })
+            inquirer
+            .prompt ([
+                {
+                    name: "roleName",
+                    type: "input",
+                    message: "Role Name:"
+
+                },
+                {
+                    name: "salaryId",
+                    type: "input",
+                    message: "Salary:"
+
+                },
+                {
+                    name: "deptId",
+                    type: "list",
+                    message: "Which department would you like to assign the new role too?",
+                    choices: deptArray
+                },
+            ])
+            .then(function (answer) {
+                db.query(
+                  "INSERT INTO role SET ?",
+                  {
+                    title: answer.roleName,
+                    salary: answer.salaryId,
+                  },
+                  "INSERT INTO department SET ?",
+                {
+                department_name: answer.deptId,
+                },
+                  function (err) {
+                    if (err) throw err;
+                  }
+                );
+                Menu();
+                })
+            })
+
+}
 
 const addEmployee = () =>{
     db.promise().query("SELECT * FROM employee").then(employeeData => {
