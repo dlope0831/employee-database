@@ -1,5 +1,5 @@
 # Employee Database
-This app helps small business owners interact helps manager their company's employees through the utilization of node, inquirer and MySQL.
+This app helps small business owners manage their company's employees database through the utilization of node, inquirer and MySQL.
 
 # Usage 
 As a business owner
