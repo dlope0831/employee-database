@@ -26,7 +26,7 @@ VALUES
 (6,"Irene","Perez", 2, NULL),
 (7,"Momo", "Martinez", 1, NULL),
 (8,"Jean", "Black", 3, NULL);
-(9,"Anna","Sanchez", 2, 4),
-(10,"Joe","Smith", 8, 3),
-(11,"Melissa","Barnes", 6, 2),
-(12,"Robin","Zinc", 4, 1);
+(9,"Anna","Sanchez", 2, 1),
+(10,"Joe","Smith", 8, 2),
+(11,"Melissa","Barnes", 6, 3),
+(12,"Robin","Zinc", 4, );

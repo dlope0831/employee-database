@@ -19,7 +19,7 @@ function Menu () {
               "Add a role",
               "Add an employee",
               "Update an employee role",
-              "Exit"
+              "Exit",
             ],   
         
     })
@@ -45,6 +45,9 @@ function Menu () {
             break;
             case "Update an employee role":
             updateRole ();
+            break;
+            case "Exit":
+            console.log("See you later!")
             break;
         }
     })
